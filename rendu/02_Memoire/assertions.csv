@@ -1,0 +1,140 @@
+ref,cle,valeur,statut,acteur,autorite,date_fait,source,ancre,lien,note
+EV002,role:charge_de_projet,Élodie Caron,DECISION,Comité de démarrage,comite,,02_Reunions/M01_CR_Demarrage_07juillet.txt,L9,,
+EV002,role:charge_de_projet,Élodie Caron,REFLET,Charte v1,,,04_Documents_projet/Charte_Projet_NOVA_v1.txt,L4,,charte non mise à jour automatiquement (ligne 20)
+EV041,role:charge_de_projet,Nicolas Perron,DECISION,Élodie Caron,,,01_Courriels/E06_Transition_charge_projet.eml,msg,,"« à compter d'aujourd'hui, 16 septembre »"
+EV041,role:charge_de_projet,Nicolas Perron,DECISION,Élodie Caron,,,04_Documents_projet/Note_transition_Elodie_16sept.txt,L4,,
+EV041,role:charge_de_projet,Nicolas Perron,CONSTAT,Élodie Caron,,,07_Conversations_Teams/Teams_16sept_Transition.txt,L4,,
+ROLE,role:securite,Sophie Lambert,CONSTAT,Atelier architecture,,,02_Reunions/M02_Transcript_Architecture_23juillet.txt,L3,,rôle déduit : « Sophie Lambert (sécurité) »
+ROLE,role:architecture,Marc Gervais,CONSTAT,Atelier architecture,,,02_Reunions/M02_Transcript_Architecture_23juillet.txt,L3,,rôle déduit : « Marc Gervais (architecture) »
+ROLE,role:integration,Marc Gervais,CONSTAT,Comité de démarrage,,,02_Reunions/M01_CR_Demarrage_07juillet.txt,L16,,rôle déduit : chargé du connecteur interne ; propriétaire de R-01
+ROLE,role:accessibilite,Mélissa Gagnon,CONSTAT,Mélissa Gagnon,,,03_Tickets/ACC-301.txt,L14,,rôle déduit : analyses des tickets ACC ; propriétaire de R-04
+ROLE,role:exploitation,Olivier Côté,CONSTAT,Olivier Côté,,,02_Reunions/M04_Transcript_Comite_direction_10sept.txt,L12,,rôle déduit : « Pour l'exploitation... » ; propriétaire de R-03
+ROLE,role:migration,Camille Beaulieu,CONSTAT,Camille Beaulieu,,,03_Tickets/DATA-401.txt,L4,,rôle déduit : demandeuse de DATA-401 ; propriétaire de R-05
+ROLE,role:finances,Amélie Fortin,CONSTAT,Amélie Fortin,,,01_Courriels/E07_Facture_003_question.eml,msg,,signature « Amélie / Finances »
+ORG,organisation:Julien Moreau,Boréal,CONSTAT,,,,01_Courriels/E05_Retard_integration.eml,msg,,adresse @boreal.example
+EV001,projet:date_golive,2026-10-15,REFLET,Plan préliminaire (juin),,2026-06-01,08_Archives_et_documents_connexes/Plan_NOVA_preliminaire_juin.xlsx,Plan projet!3,,version préliminaire ; date exacte du fichier inconnue
+EV004,projet:date_golive,2026-10-15,DECISION,Comité de démarrage,comite,,02_Reunions/M01_CR_Demarrage_07juillet.txt,L11,,
+EV004,projet:date_golive,2026-10-15,REFLET,Charte v1,,,04_Documents_projet/Charte_Projet_NOVA_v1.txt,L7,,
+PLANV2,projet:date_golive,2026-10-15,REFLET,Plan projet v2,,,04_Documents_projet/Plan_Projet_NOVA_v2.xlsx,Plan projet!7,,« Cible initiale » ; date du fichier inconnue
+EV030,projet:date_golive,2026-10-22,PROPOSITION,Julien Moreau,,,01_Courriels/E05_Retard_integration.eml,msg,,« il s'agit d'une proposition de notre part »
+EV030,projet:date_golive,2026-10-22,PROPOSITION,Julien Moreau,,,02_Reunions/M04_Transcript_Comite_direction_10sept.txt,L6,,recommandation réitérée en comité
+EV034,projet:date_golive,2026-10-22,DECISION,Comité de direction,comite,,02_Reunions/M04_Transcript_Comite_direction_10sept.txt,L23,,"formulée par Élodie à 15:22 (ligne 17), aucune opposition, « Donc approuvé » à 15:25"
+EV036,golive:reserve,"pas un go automatique : critères sécurité, accessibilité et exploitation maintenus",DECISION,Comité de direction,comite,,02_Reunions/M04_Transcript_Comite_direction_10sept.txt,L24,,"rappel de Nicolas, confirmé par Sophie à 15:28"
+EV038,projet:date_golive,2026-10-15,REFLET,Plan projet v3,,2026-09-12,04_Documents_projet/Plan_Projet_NOVA_v3_12sept.xlsx,Plan projet!7,,« Cible de planification » ; date tirée du nom de fichier
+EV040,projet:date_golive,2026-10-22,CONSTAT,Nicolas Perron,,,07_Conversations_Teams/Teams_15sept_ProjetNOVA.txt,L5,,« le plan projet n'a visiblement pas encore été corrigé »
+M05,projet:date_golive,2026-10-22,CONSTAT,Suivi livraison,,,02_Reunions/M05_CR_Suivi_18sept.txt,L13,,
+EV055,projet:date_golive,2026-10-22,DECISION,Comité de direction,comite,,02_Reunions/M06_Transcript_Comite_26sept.txt,L16,,« c'est conditionnel à ces trois éléments »
+EV055,golive:condition:SEC-210,validation sécurité de SEC-210,DECISION,Comité de direction,comite,,02_Reunions/M06_Transcript_Comite_26sept.txt,L11,ticket:SEC-210:statut,
+EV055,golive:condition:ACC-303,fermeture d'ACC-303,DECISION,Comité de direction,comite,,02_Reunions/M06_Transcript_Comite_26sept.txt,L11,ticket:ACC-303:statut,
+EV055,golive:condition:runbook,approbation du runbook incluant le rollback,DECISION,Comité de direction,comite,,02_Reunions/M06_Transcript_Comite_26sept.txt,L11,ticket:OPS-601:statut,
+EV059,projet:date_golive,2026-10-22,CONSTAT,Nicolas Perron,,,01_Courriels/E09_Rappel_mise_en_production.eml,msg,,rappel écrit
+EV059,communication:golive,ne pas communiquer le 22 octobre comme un go garanti,DECISION,Nicolas Perron,,,01_Courriels/E09_Rappel_mise_en_production.eml,msg,,
+EV035,action:maj_plans_date,A_FAIRE,ENGAGEMENT,Élodie Caron,,,02_Reunions/M04_Transcript_Comite_direction_10sept.txt,L23,,« On doit mettre les plans et communications à jour »
+EV040,action:maj_plans_date,A_FAIRE,CONSTAT,Nicolas Perron,,,07_Conversations_Teams/Teams_15sept_ProjetNOVA.txt,L5,,plan pas encore corrigé au 15 septembre
+NOTE,action:maj_plans_date,A_FAIRE,ENGAGEMENT,Élodie Caron,,,04_Documents_projet/Note_transition_Elodie_16sept.txt,L7,,
+EV030,analyse:cause_report_golive,instabilité du connecteur interne (INT-101),DECLARATION,Julien Moreau,,,01_Courriels/E05_Retard_integration.eml,msg,ticket:INT-101:statut,
+EV034,analyse:cause_report_golive,instabilité du connecteur interne (INT-101),CONSTAT,Marc Gervais,,,02_Reunions/M04_Transcript_Comite_direction_10sept.txt,L9,ticket:INT-101:statut,« le connecteur est le chemin critique »
+EV003,projet:budget_initial,180000,DECISION,Comité de démarrage,comite,,02_Reunions/M01_CR_Demarrage_07juillet.txt,L10,,
+EV003,projet:budget_initial,180000,REFLET,Charte v1,,,04_Documents_projet/Charte_Projet_NOVA_v1.txt,L6,,
+EV006,contrat:plafond,180000,DOCUMENT,Contrat (Organisation Démo),comite,2026-07-07,05_Contrats_et_finances/CONTRAT_Boreal_NOVA.pdf,p1,,document contractuel ; montant maximal initial en CAD
+EV006,contrat:fin,2026-10-31,DOCUMENT,Contrat (Organisation Démo),comite,2026-07-07,05_Contrats_et_finances/CONTRAT_Boreal_NOVA.pdf,p1,,
+EV006,contrat:regle_changement,tout travail hors portée exige une demande de changement écrite et approuvée avant exécution et facturation,DOCUMENT,Contrat (Organisation Démo),comite,2026-07-07,05_Contrats_et_finances/CONTRAT_Boreal_NOVA.pdf,p1,,
+EV005,portee:phase1,SSO; création et suivi de demandes; pièces jointes; workflow; tableau de suivi; rapports standards,DECISION,Comité de démarrage,comite,,02_Reunions/M01_CR_Demarrage_07juillet.txt,L12,,
+EV006,portee:phase1,SSO; création et suivi de demandes; pièces jointes; workflow; tableau de suivi; rapports standards,DOCUMENT,Contrat (Organisation Démo),comite,2026-07-07,05_Contrats_et_finances/CONTRAT_Boreal_NOVA.pdf,p1,,
+EV015,cr:CR-01:statut,APPROUVE,DECISION,Comité de projet,comite,,05_Contrats_et_finances/CR-01_Rapports_avances_APPROUVE.pdf,p1,,date de décision 14 août 2026
+EV015,cr:CR-01:montant,24000,DOCUMENT,Comité de projet,comite,,05_Contrats_et_finances/CR-01_Rapports_avances_APPROUVE.pdf,p1,,
+EV027,cr:CR-04:statut,BROUILLON,DOCUMENT,Boréal Numérique,,,05_Contrats_et_finances/CR-04_Optimisation_mobile_BROUILLON.pdf,p1,,"« BROUILLON - APPROBATION REQUISE », aucune signature"
+EV027,cr:CR-04:montant,18000,PROPOSITION,Boréal Numérique,,,05_Contrats_et_finances/CR-04_Optimisation_mobile_BROUILLON.pdf,p1,,montant estimé
+EV051,cr:CR-04:statut,BROUILLON,CONSTAT,Amélie Fortin,,,01_Courriels/E07_Facture_003_question.eml,msg,,« rien qui indique qu'il a été approuvé »
+EV037,portee:mobile_avance:phase1,EXCLU,DECISION,Comité de direction,comite,,02_Reunions/M04_Transcript_Comite_direction_10sept.txt,L35,,« Mobile : aucune décision de dépense » ; hors portée actuelle (15:33)
+NOTE,portee:mobile_avance:phase1,EXCLU,CONSTAT,Élodie Caron,,,04_Documents_projet/Note_transition_Elodie_16sept.txt,L8,,« ne pas considérer le mobile avancé comme approuvé »
+EV049,portee:mobile_avance:phase1,INCLUS,DECLARATION,Julien Moreau,,,07_Conversations_Teams/Teams_22sept_Mobile.txt,L4,,« je pensais que le mobile était inclus »
+EV049,portee:mobile_avance:phase1,EXCLU,CONSTAT,Nicolas Perron,,,07_Conversations_Teams/Teams_22sept_Mobile.txt,L5,,"compatibilité de base oui, CR-04 non approuvé"
+EV052,portee:mobile_avance:phase1,EXCLU,DECISION,Nicolas Perron,,,06_Architecture_et_decisions/Decision_Portee_Phase2.md,L6,,
+EV052,portee:mobile_avance:phase2,REPORTE,DECISION,Nicolas Perron,,,06_Architecture_et_decisions/Decision_Portee_Phase2.md,L4,,
+EV052,cr:CR-04:statut,REPORTE_PHASE2,DECISION,Nicolas Perron,,,06_Architecture_et_decisions/Decision_Portee_Phase2.md,L4,,
+EV052,cr:CR-04:facturable,NON,DECISION,Nicolas Perron,,,01_Courriels/E10_Fonction_mobile.eml,msg,,« aucune dépense liée à CR-04 ne doit être engagée ou facturée sans nouvelle approbation »
+EV056,cr:CR-04:facturable,NON,DECISION,Nicolas Perron,,,02_Reunions/M06_Transcript_Comite_26sept.txt,L23,,"« Regarder, oui. Facturer du CR-04, non. »"
+M06,action:ajustements_mobiles_boreal,EN_COURS,DECLARATION,Julien Moreau,,,02_Reunions/M06_Transcript_Comite_26sept.txt,L22,,Boréal a déjà commencé des ajustements mobiles
+EV012,facture:INV-001:statut,PAYEE,DOCUMENT,Boréal Numérique,,,05_Contrats_et_finances/INV-001.pdf,p1,,statut indiqué sur la facture
+EV012,facture:INV-001:total,60000,DOCUMENT,Boréal Numérique,,,05_Contrats_et_finances/INV-001.pdf,p1,,
+EV012,facture:INV-001:ligne:acompte,60000,DOCUMENT,Boréal Numérique,,,05_Contrats_et_finances/INV-001.pdf,p1,,
+EV024,facture:INV-002:statut,PAYEE,DOCUMENT,Boréal Numérique,,,05_Contrats_et_finances/INV-002.pdf,p1,,statut indiqué sur la facture
+EV024,facture:INV-002:total,72000,DOCUMENT,Boréal Numérique,,,05_Contrats_et_finances/INV-002.pdf,p1,,
+EV024,facture:INV-002:ligne:jalon2,48000,DOCUMENT,Boréal Numérique,,,05_Contrats_et_finances/INV-002.pdf,p1,,
+EV024,facture:INV-002:ligne:CR-01,24000,DOCUMENT,Boréal Numérique,,,05_Contrats_et_finances/INV-002.pdf,p1,,
+EV050,facture:INV-003:statut,EN_VALIDATION,DOCUMENT,Boréal Numérique,,,05_Contrats_et_finances/INV-003.pdf,p1,,statut indiqué sur la facture
+EV050,facture:INV-003:total,54000,DOCUMENT,Boréal Numérique,,,05_Contrats_et_finances/INV-003.pdf,p1,,
+EV050,facture:INV-003:ligne:jalon3,36000,DOCUMENT,Boréal Numérique,,,05_Contrats_et_finances/INV-003.pdf,p1,,
+EV050,facture:INV-003:ligne:CR-04,18000,DOCUMENT,Boréal Numérique,,,05_Contrats_et_finances/INV-003.pdf,p1,,
+EV051,facture:INV-003:statut,EN_VALIDATION,CONSTAT,Amélie Fortin,,,01_Courriels/E07_Facture_003_question.eml,msg,,libération en attente de l'approbation de CR-04
+EV007,hebergement:production,East US,DOCUMENT,Boréal Numérique,,,06_Architecture_et_decisions/Architecture_NOVA_v1.pdf,p1,,"architecture v1, préparée avant la décision de localisation"
+EV008,exigence:donnees_au_canada,données de production au Canada,PROPOSITION,Sophie Lambert,,,01_Courriels/E02_Question_hebergement.eml,msg,,« à trancher demain en atelier »
+EV009,hebergement:production,Canada Central,DECISION,Élodie Caron,,,02_Reunions/M02_Transcript_Architecture_23juillet.txt,L17,,"tranché en atelier (09:10-09:12), Marc, Sophie et Julien d'accord"
+EV009,hebergement:production,Canada Central,DECISION,Élodie Caron,,,06_Architecture_et_decisions/ADR-007_Localisation_donnees.md,L10,,"ADR-007, statut « Acceptée »"
+EV020,hebergement:production,Canada Central,DOCUMENT,Boréal Numérique,,,06_Architecture_et_decisions/Architecture_NOVA_v2.pdf,p1,,pièce jointe de E03 : pas une confirmation indépendante
+EV021,hebergement:migration,COMPLETEE,DECLARATION,Julien Moreau,,,01_Courriels/E03_Confirmation_Canada_Central.eml,msg,,test de déploiement et de connectivité
+EV022,hebergement:migration,COMPLETEE,VALIDATION,Comité projet,comite,,02_Reunions/M03_CR_Comite_27aout.txt,L5,,« déclarée terminée par Boréal et vérifiée par l'équipe architecture »
+ADR,exigence:validation_migration,une validation technique doit confirmer la migration avant les tests de production,DECISION,Élodie Caron,,,06_Architecture_et_decisions/ADR-007_Localisation_donnees.md,L15,,
+EV010,exigence:securite_sso,"SSO seulement en production, pas de comptes locaux",DECISION,Sophie Lambert,,,02_Reunions/M02_Transcript_Architecture_23juillet.txt,L19,,
+EV011,exigence:securite_journalisation_admin,"journaliser toutes les actions administrateur, surtout consultation et export",DECISION,Sophie Lambert,,,02_Reunions/M02_Transcript_Architecture_23juillet.txt,L28,,Boréal : « On vous montrera ça en validation » (09:38)
+EV039,ticket:SEC-210:statut,OUVERT,CONSTAT,Sophie Lambert,,2026-09-12,03_Tickets/SEC-210.txt,L18,,export CSV journalisé sans objet ni résultat ; bloquant avant production
+EV045,livraison:SEC-210,LIVRE,DECLARATION,Julien Moreau,,,01_Courriels/E08_Correctif_journalisation.eml,msg,,
+EV045,ticket:SEC-210:statut,FERME,DECLARATION,Julien Moreau,,,01_Courriels/E08_Correctif_journalisation.eml,msg,,"« pour nous, le problème est corrigé »"
+EV045,ticket:SEC-210:statut,FERME,DECLARATION,Boréal,,,03_Tickets/SEC-210.txt,L23,,« Pour nous c'est réglé »
+EV045,ticket:SEC-210:statut,FERME,DECLARATION,Julien Moreau,,,07_Conversations_Teams/Teams_19sept_Securite.txt,L4,,
+EV046,ticket:SEC-210:statut,EN_VALIDATION,CONSTAT,Sophie Lambert,,,03_Tickets/SEC-210.txt,L24,,« Ne pas fermer avant validation sécurité »
+EV046,ticket:SEC-210:statut,EN_VALIDATION,CONSTAT,Sophie Lambert,,,07_Conversations_Teams/Teams_19sept_Securite.txt,L5,,« déployé » != « accepté »
+M06,livraison:SEC-210,LIVRE,CONSTAT,Sophie Lambert,,,02_Reunions/M06_Transcript_Comite_26sept.txt,L7,,« Vous avez livré un fix »
+M06,ticket:SEC-210:statut,EN_VALIDATION,CONSTAT,Sophie Lambert,,,02_Reunions/M06_Transcript_Comite_26sept.txt,L7,,« Nous n'avons pas encore donné l'acceptation sécurité »
+EV058,ticket:SEC-210:statut,EN_VALIDATION,CONSTAT,Sophie Lambert,,,03_Tickets/SEC-210.txt,L25,,« Re-test planifié »
+EV058,action:retest_SEC-210,A_FAIRE,ENGAGEMENT,Sophie Lambert,,,03_Tickets/SEC-210.txt,L25,,date du re-test non précisée
+EV013,ticket:ACC-301:statut,OUVERT,CONSTAT,Mélissa Gagnon,,,03_Tickets/ACC-301.txt,L14,,aucun label associé
+ACC301,livraison:ACC-301,LIVRE,DECLARATION,Boréal,,,03_Tickets/ACC-301.txt,L15,,
+EV017,ticket:ACC-301:statut,FERME,VALIDATION,Mélissa Gagnon,,,03_Tickets/ACC-301.txt,L16,,validé NVDA et VoiceOver
+EV014,ticket:ACC-302:statut,OUVERT,CONSTAT,Mélissa Gagnon,,,03_Tickets/ACC-302.txt,L14,,"contraste 2,1:1"
+ACC302,livraison:ACC-302,LIVRE,DECLARATION,Boréal,,,03_Tickets/ACC-302.txt,L15,,
+EV019,ticket:ACC-302:statut,FERME,VALIDATION,Mélissa Gagnon,,,03_Tickets/ACC-302.txt,L16,,"re-test 5,3:1"
+EV018,ticket:ACC-301:statut,FERME,DECLARATION,Julien Moreau,,,01_Courriels/E04_Corrections_accessibilite.eml,msg,,« tout devrait maintenant être conforme »
+EV018,ticket:ACC-302:statut,FERME,DECLARATION,Julien Moreau,,,01_Courriels/E04_Corrections_accessibilite.eml,msg,,« tout devrait maintenant être conforme »
+EV014,action:test_clavier_modales,A_FAIRE,ENGAGEMENT,Mélissa Gagnon,,2026-08-12,01_Courriels/E04_Corrections_accessibilite.eml,msg,,citation du 12 août : « repasser les modales au clavier »
+M03,ticket:ACC-301:statut,FERME,CONSTAT,Comité projet,comite,,02_Reunions/M03_CR_Comite_27aout.txt,L11,,
+M03,ticket:ACC-302:statut,FERME,CONSTAT,Comité projet,comite,,02_Reunions/M03_CR_Comite_27aout.txt,L11,,
+M03,action:test_clavier_modales,A_FAIRE,ENGAGEMENT,Mélissa Gagnon,,,02_Reunions/M03_CR_Comite_27aout.txt,L11,,deuxième passage clavier sur les modales
+EV042,ticket:ACC-303:statut,OUVERT,CONSTAT,Mélissa Gagnon,,,03_Tickets/ACC-303.txt,L14,,"Tab n'atteint jamais « Enregistrer » (Chrome, Edge, build 2026.09.17)"
+EV042,action:test_clavier_modales,FAIT,CONSTAT,Mélissa Gagnon,,,03_Tickets/ACC-303.txt,L14,,le passage clavier sur les modales a produit ACC-303
+M06,ticket:ACC-303:statut,OUVERT,CONSTAT,Mélissa Gagnon,,,02_Reunions/M06_Transcript_Comite_26sept.txt,L9,,« Pour moi c'est un bloquant »
+EV057,ticket:ACC-303:statut,OUVERT,CONSTAT,Mélissa Gagnon,,,03_Tickets/ACC-303.txt,L16,,« Correctif annoncé pour la prochaine build »
+EV054,action:correctif_ACC-303,EN_COURS,ENGAGEMENT,Julien Moreau,,,02_Reunions/M06_Transcript_Comite_26sept.txt,L15,,« dans la prochaine build » : date non précisée
+EV028,ticket:INT-101:statut,OUVERT,CONSTAT,Marc Gervais,,,03_Tickets/INT-101.txt,L14,,recherches vides en INT
+EV031,ticket:INT-101:statut,OUVERT,CONSTAT,Marc Gervais,,,03_Tickets/INT-101.txt,L16,,erreurs intermittentes ; risque sur le 15 octobre
+INT101,livraison:INT-101,LIVRE,DECLARATION,Boréal,,,03_Tickets/INT-101.txt,L17,,120 recherches rejouées
+EV043,ticket:INT-101:statut,FERME,VALIDATION,Marc Gervais,,,03_Tickets/INT-101.txt,L18,,« Validé côté intégration. Je ferme. »
+EV043,ticket:INT-101:statut,FERME,VALIDATION,Marc Gervais,,,01_Courriels/E12_Resolution_integration.eml,msg,,120/120 ; « considéré résolu »
+M05,ticket:INT-101:statut,FERME,CONSTAT,Suivi livraison,,,02_Reunions/M05_CR_Suivi_18sept.txt,L6,,
+EV025,ticket:DATA-401:statut,OUVERT,CONSTAT,Camille Beaulieu,,2026-09-02,03_Tickets/DATA-401.txt,L14,,doublons 8401/8402
+EV032,ticket:DATA-401:statut,FERME,VALIDATION,Camille Beaulieu,,,03_Tickets/DATA-401.txt,L19,,rejeu de 15 000 événements sans doublon
+EV032,ticket:DATA-401:statut,FERME,CONSTAT,Camille Beaulieu,,,02_Reunions/M04_Transcript_Comite_direction_10sept.txt,L13,,
+EV026,ticket:PERF-501:statut,OUVERT,CONSTAT,Support,,,03_Tickets/PERF-501.txt,L13,,
+EV029,ticket:PERF-501:statut,FERME,VALIDATION,Support,,,03_Tickets/PERF-501.txt,L16,,620 ms sur 50 essais
+EV033,exigence:exploitation_runbook_final,runbook final au moins quelques jours avant la mise en production,DECISION,Olivier Côté,,,02_Reunions/M04_Transcript_Comite_direction_10sept.txt,L12,,
+M05,action:runbook_final,A_FAIRE,CONSTAT,Suivi livraison,,,02_Reunions/M05_CR_Suivi_18sept.txt,L11,,runbook non final
+EV053,ticket:OPS-601:statut,OUVERT,CONSTAT,Olivier Côté,,,03_Tickets/OPS-601.txt,L14,,il manque au minimum la procédure de rollback
+EV053,action:runbook_etape4_retour_arriere,A_FAIRE,DOCUMENT,Runbook (version du 25 septembre),,2026-09-25,03_Tickets/OPS-601_runbook.png,capture,,étape 4 « Procédure de retour arrière » : TODO
+EV053,action:runbook_etape5_validation_post_deploiement,A_FAIRE,DOCUMENT,Runbook (version du 25 septembre),,2026-09-25,03_Tickets/OPS-601_runbook.png,capture,,étape 5 « Validation fonctionnelle post-déploiement » : À compléter
+M06,ticket:OPS-601:statut,OUVERT,CONSTAT,Olivier Côté,,,02_Reunions/M06_Transcript_Comite_26sept.txt,L10,,« Je ne donnerai pas mon go exploitation tant que... »
+EV054,action:runbook_final,EN_COURS,ENGAGEMENT,Julien Moreau,,,02_Reunions/M06_Transcript_Comite_26sept.txt,L15,,« je relance notre équipe ops »
+EV060,ticket:OPS-601:statut,OUVERT,CONSTAT,Olivier Côté,,,03_Tickets/OPS-601.txt,L16,,« Toujours pas reçu la version finale »
+EV060,action:runbook_final,A_FAIRE,CONSTAT,Olivier Côté,,,03_Tickets/OPS-601.txt,L16,,
+EV023,action:build_stabilisation,A_FAIRE,ENGAGEMENT,Comité projet,comite,,02_Reunions/M03_CR_Comite_27aout.txt,L13,,début septembre
+M06,action:build_stabilisation,FAIT,DECLARATION,Julien Moreau,,,02_Reunions/M06_Transcript_Comite_26sept.txt,L6,,« la build est stable » : non vérifié
+EV048,rapport:securite,VERT,REFLET,Rapport de statut du 21 septembre,,,04_Documents_projet/Rapport_Statut_21sept.pdf,p1,ticket:SEC-210:statut,« Correctif SEC-210 livré » ; préparé avant la vérification détaillée des tickets
+EV048,rapport:accessibilite,VERT,REFLET,Rapport de statut du 21 septembre,,,04_Documents_projet/Rapport_Statut_21sept.pdf,p1,ticket:ACC-303:statut,« Correctifs appliqués » ; préparé avant la vérification détaillée des tickets
+EV048,rapport:exploitation,JAUNE,REFLET,Rapport de statut du 21 septembre,,,04_Documents_projet/Rapport_Statut_21sept.pdf,p1,ticket:OPS-601:statut,« Runbook à finaliser » ; préparé avant la vérification détaillée des tickets
+EV048,rapport:echeancier,VERT,REFLET,Rapport de statut du 21 septembre,,,04_Documents_projet/Rapport_Statut_21sept.pdf,p1,,« Cible 22 octobre » ; préparé avant la vérification détaillée des tickets
+EV047,communication:statut_projet,"NOVA au vert, sécurité et accessibilité complétées",PROPOSITION,Alex Deschamps,,,01_Courriels/E11_Communication_statut.eml,msg,,brouillon ; aucune réponse documentée
+EV061,risque:R-01:statut,OUVERT,REFLET,Registre des risques,,2026-09-09,04_Documents_projet/Registre_Risques_29sept.xlsx,Risques!2,ticket:INT-101:statut,commentaire H2 « Suivi au 9 septembre 2026 »
+EV062,risque:R-02:statut,OUVERT,REFLET,Registre des risques,,2026-09-29,04_Documents_projet/Registre_Risques_29sept.xlsx,Risques!3,ticket:SEC-210:statut,date tirée du nom de fichier
+EV062,risque:R-03:statut,OUVERT,REFLET,Registre des risques,,2026-09-29,04_Documents_projet/Registre_Risques_29sept.xlsx,Risques!4,ticket:OPS-601:statut,date tirée du nom de fichier
+EV062,risque:R-04:statut,OUVERT,REFLET,Registre des risques,,2026-09-29,04_Documents_projet/Registre_Risques_29sept.xlsx,Risques!5,ticket:ACC-303:statut,date tirée du nom de fichier
+EV062,risque:R-05:statut,FERME,REFLET,Registre des risques,,2026-09-29,04_Documents_projet/Registre_Risques_29sept.xlsx,Risques!6,ticket:DATA-401:statut,date tirée du nom de fichier

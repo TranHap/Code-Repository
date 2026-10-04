@@ -1,0 +1,7 @@
+.env
+__pycache__/
+.pytest_cache/
+nova_brain/data/*
+!nova_brain/data/memory.db
+hi.txt
+NOVA_ETUDIANTS/

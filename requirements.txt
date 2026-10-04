@@ -1,0 +1,7 @@
+streamlit>=1.46
+pandas
+openai>=1.40
+pymupdf
+openpyxl
+markdown
+pytest

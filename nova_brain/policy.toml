@@ -1,0 +1,109 @@
+# Politique de résolution des contradictions.
+# Modifier ce fichier change qui « gagne » en cas de contradiction, sans toucher au code.
+# Comparer deux politiques : python -m nova_brain.resolver --policy autre.toml --diff
+
+version = "2026-10-03-v1"
+description = "Autorité d'abord, puis date du fait. Validation réservée au responsable du domaine."
+
+# Rang d'autorité : plus petit = plus fort.
+[autorite]
+comite = 1
+charge_de_projet = 2
+responsable_domaine = 3   # titulaire du rôle qui correspond au sujet (voir [domaines])
+partie_prenante = 4
+fournisseur = 5
+reflet = 6                # plan, registre, rapport : recopie un état
+non_officiel = 7          # note sans auteur, document hors projet
+
+[organisations]
+fournisseurs = ["Boréal"]
+
+# Instances reconnues dans le champ acteur (ex. mise à jour par chat : « le Comité de direction a décidé »).
+[instances]
+comite = ["Comité de direction", "Comité de projet", "Comité de démarrage", "Comité projet"]
+
+# Préfixe de clé → rôle responsable de ce domaine.
+# Les titulaires des rôles NE SONT PAS ici : ce sont des faits datés (clés role:*) dans la mémoire.
+[domaines]
+"ticket:SEC-" = "securite"
+"livraison:SEC-" = "securite"
+"exigence:securite" = "securite"
+"ticket:ACC-" = "accessibilite"
+"ticket:OPS-" = "exploitation"
+"exigence:exploitation" = "exploitation"
+"ticket:INT-" = "integration"
+"ticket:DATA-" = "migration"
+"hebergement:" = "architecture"
+"facture:" = "finances"
+
+[validation]
+# Valeurs qui ferment un sujet. Seuls le comité ou le titulaire du rôle du domaine peuvent les poser ;
+# sans domaine défini pour la clé, tout acteur sauf le fournisseur.
+valeurs_controlees = ["FERME", "COMPLETEE"]
+
+# Familles de clés : la première dont le motif correspond s'applique.
+# gagnant = statuts qui peuvent fixer la valeur ; ordre = critères de départage, du plus important au moins.
+[[famille]]
+motif = "role:*"
+gagnant = ["DECISION", "DOCUMENT", "CONSTAT"]
+ordre = ["date_fait", "autorite"]          # un rôle se transmet : le plus récent l'emporte
+
+[[famille]]
+motif = "organisation:*"
+gagnant = ["DECISION", "DOCUMENT", "CONSTAT"]
+ordre = ["date_fait", "autorite"]
+
+[[famille]]
+motif = "ticket:*"
+gagnant = ["VALIDATION", "CONSTAT"]
+ordre = ["date_fait", "autorite"]          # un ticket peut être rouvert : l'état le plus récent l'emporte
+
+[[famille]]
+motif = "livraison:*"
+gagnant = ["CONSTAT", "VALIDATION", "DECLARATION"]   # le fournisseur peut déclarer une livraison, pas la valider
+ordre = ["date_fait", "autorite"]
+
+[[famille]]
+motif = "action:*"
+gagnant = ["ENGAGEMENT", "CONSTAT", "VALIDATION", "DECISION", "DOCUMENT"]
+ordre = ["date_fait", "autorite"]
+
+[[famille]]
+motif = "risque:*"
+gagnant = ["DECISION", "VALIDATION", "CONSTAT", "REFLET"]
+ordre = ["date_fait", "autorite"]
+
+[[famille]]
+motif = "rapport:*"
+gagnant = ["REFLET", "DOCUMENT"]
+ordre = ["date_fait"]
+
+[[famille]]
+motif = "analyse:*"
+gagnant = ["CONSTAT", "VALIDATION", "DECISION"]
+ordre = ["autorite", "date_fait"]
+
+[[famille]]
+motif = "*"
+gagnant = ["DECISION", "VALIDATION", "DOCUMENT"]
+ordre = ["autorite", "date_fait"]          # une décision ne remplace qu'une décision d'autorité égale ou supérieure
+
+[regles]
+actives = ["coherence_reflet", "budget_autorise", "facture_cr_non_approuve", "conditions_golive"]
+
+# coherence_reflet : valeur du reflet → états attendus de la clé liée (colonne lien).
+[coherence]
+VERT = ["FERME"]
+JAUNE = ["OUVERT", "EN_VALIDATION"]
+ROUGE = ["OUVERT", "EN_VALIDATION"]
+OUVERT = ["OUVERT", "EN_VALIDATION"]
+FERME = ["FERME"]
+
+# conditions_golive : une condition est remplie quand sa clé liée a l'une de ces valeurs.
+[conditions]
+remplie_si = ["FERME"]
+
+# budget_autorise : plafond + somme des CR approuvés.
+[budget]
+plafond = "contrat:plafond"
+statut_cr_approuve = "APPROUVE"

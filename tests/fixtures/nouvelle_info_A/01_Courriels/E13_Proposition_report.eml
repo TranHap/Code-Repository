@@ -1,0 +1,23 @@
+Subject: NOVA - ACC-303 =?utf-8?q?corrig=C3=A9?= et proposition de nouvelle
+ date
+From: Julien Moreau <julien.moreau@boreal.example>
+To: nicolas.perron@demo.example, melissa.gagnon@demo.example
+Date: Thu, 01 Oct 2026 10:12:00 -0400
+Message-ID: <e13_proposition_report@nova.demo.local>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Bonjour Nicolas,
+
+Le correctif ACC-303 est d=C3=A9ploy=C3=A9 dans la build 2026.10.01. Pour nou=
+s, la modale est maintenant conforme.
+
+Compte tenu du re-test d'accessibilit=C3=A9 et du runbook qui n'est pas encor=
+e finalis=C3=A9 de notre c=C3=B4t=C3=A9, nous proposons de d=C3=A9placer la m=
+ise en production au 29 octobre 2026.
+
+C'est une proposition : la d=C3=A9cision revient au comit=C3=A9.
+
+Julien
+Bor=C3=A9al Num=C3=A9rique
